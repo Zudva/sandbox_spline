@@ -11,7 +11,7 @@ const canvas = document.getElementById('canvas3d');
 
 // start the application and load the scene (selfhosted)
 const spline = new Application(canvas);
-spline.load('/scene.splinecode');
+spline.load('/bunny_cube_scene.splinecode');
 
 // TODO: does not work?
 spline.setBackgroundColor('red');
