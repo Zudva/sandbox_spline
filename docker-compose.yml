@@ -1,0 +1,27 @@
+version: "3"
+services:
+  # nginx:
+  #   image: nginx:stable-alpine
+  #   ports:
+  #     - 80:80
+  #     - 443:443
+  #   volumes:
+  #     - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+  #     - /etc/letsencrypt:/etc/letsencrypt
+  #   depends_on:
+  #     - frontend
+  #   restart: always
+  #   networks:
+  #     - interstelar-prodaction
+
+  frontend:
+    build:
+      context: .
+    ports:
+      - 4001:4001
+    networks:
+      - interstelar-prodaction
+
+networks:
+  interstelar-prodaction:
+    driver: bridge
